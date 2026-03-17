@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scholarship / Seminar Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 20px;
+        }
+        form {
+            width: 60%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        fieldset {
+            margin-bottom: 15px;
+            border: 2px solid #4CAF50;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        .inline {
+            width: auto;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <h2>Scholarship / Seminar Registration Form</h2>
+
+    <!-- Personal Details -->
+    <fieldset>
+        <legend>Personal Information</legend>
+
+        <label>Full Name:</label>
+        <input type="text" name="fullname" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Phone Number:</label>
+        <input type="tel" name="phone">
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male" class="inline"> Male
+        <input type="radio" name="gender" value="female" class="inline"> Female
+        <input type="radio" name="gender" value="other" class="inline"> Other
+    </fieldset>
+
+    <!-- Academic Details -->
+    <fieldset>
+        <legend>Academic Information</legend>
+
+        <label>Course:</label>
+        <select name="course">
+            <option value="">--Select Course--</option>
+            <option value="btech">B.Tech</option>
+            <option value="bsc">B.Sc</option>
+            <option value="mtech">M.Tech</option>
+            <option value="msc">M.Sc</option>
+        </select>
+
+        <label>Year of Study:</label>
+        <select name="year">
+            <option value="">--Select Year--</option>
+            <option>1st Year</option>
+            <option>2nd Year</option>
+            <option>3rd Year</option>
+            <option>4th Year</option>
+        </select>
+
+        <label>CGPA / Percentage:</label>
+        <input type="text" name="marks">
+    </fieldset>
+
+    <!-- Seminar Preferences -->
+    <fieldset>
+        <legend>Seminar Preferences</legend>
+
+        <label>Select Topics of Interest:</label>
+        <input type="checkbox" name="topics" value="ai" class="inline"> AI
+        <input type="checkbox" name="topics" value="web" class="inline"> Web Development
+        <input type="checkbox" name="topics" value="cyber" class="inline"> Cyber Security
+        <input type="checkbox" name="topics" value="data" class="inline"> Data Science
+
+        <label>Mode of Attendance:</label>
+        <input type="radio" name="mode" value="online" class="inline"> Online
+        <input type="radio" name="mode" value="offline" class="inline"> Offline
+    </fieldset>
+
+    <!-- Additional Info -->
+    <fieldset>
+        <legend>Additional Information</legend>
+
+        <label>Why are you applying?</label>
+        <textarea name="reason" rows="4"></textarea>
+    </fieldset>
+
+    <button type="submit" class="submit-btn">Submit</button>
+</form>
+
+</body>
+</html>
